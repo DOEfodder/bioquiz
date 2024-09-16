@@ -111,9 +111,6 @@ function getRandomInt(min, max) {
         console.log(name);
   
         // Here, you can do anything with the form data, such as sending it to a server or updating the UI
-
-        const scoreCounter = document.getElementById('score');
-        scoreCounter.textContent = "Questions Correct: "+questionsCorrect+"/"+questionAmount;
       
          if (eval(currentQuestion) == question1 && name == "C") {
           console.log("Correct Answer");
