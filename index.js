@@ -78,6 +78,9 @@ questionsCorrect = 0;
 var switchQuestion;
 switchQuestion = 0
 
+const scoreCounter = document.getElementById('score');
+scoreCounter.textContent = "Questions Correct: "+questionsCorrect+"/"+questionAmount;
+
 function getRandomInt(min, max) {
   const minCeiled = Math.ceil(min);
   const maxFloored = Math.floor(max);
@@ -360,11 +363,11 @@ function getRandomInt(min, max) {
         const scoreCounter = document.getElementById('score');
         scoreCounter.textContent = "Questions Correct: "+questionsCorrect+"/"+questionAmount;
 
-        if (questionsCorrect == 68) {
+        if (questionsCorrect == int(questionAmount)) {
           alert("Congratulations! You have finished the test. Click below to start a new game.");
         }
 
-        else if (questionsCorrect > 68) {
+        else if (questionsCorrect > int(questionAmount)) {
           questionsCorrect = 68;
         }
     });
