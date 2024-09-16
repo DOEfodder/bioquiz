@@ -78,9 +78,6 @@ questionsCorrect = 0;
 var switchQuestion;
 switchQuestion = 0
 
-const scoreCounter = document.getElementById('score');
-scoreCounter.textContent = "Questions Correct: "+questionsCorrect+"/"+questionAmount;
-
 function getRandomInt(min, max) {
   const minCeiled = Math.ceil(min);
   const maxFloored = Math.floor(max);
@@ -115,6 +112,9 @@ function getRandomInt(min, max) {
   
         // Here, you can do anything with the form data, such as sending it to a server or updating the UI
 
+        const scoreCounter = document.getElementById('score');
+        scoreCounter.textContent = "Questions Correct: "+questionsCorrect+"/"+questionAmount;
+      
          if (eval(currentQuestion) == question1 && name == "C") {
           console.log("Correct Answer");
           alert("Great job! You got it correct!");
